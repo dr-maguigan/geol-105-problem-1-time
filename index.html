@@ -15,7 +15,7 @@
 	   color: #FDD023;}
 	h4 {text-align: center;
 	   color: white;}
-	p {text-align: left;
+	p {text-align: center;
 	   color: white;}
 	  
 body {
@@ -26,26 +26,24 @@ body {
       font-family: Oswald;
       color: #461D7C;
       }
-	  .prompt {
+	  body {
+  background-color: #461D7C;
+}
+.promptbox {
          max-width: 85%;
          height: 25%;
 	 margin-left:auto;
          margin-right:auto;
-	  text-align: left;
+	  text-align: center;
+  font-family: Oswald;
 	  }
-      .prompt h4 {text-align:left;}
-	  .prob {
-         max-width: 75%;
-         height: 50%;
-         border: 3px solid #FDD023;
-         margin-left:auto;
-         margin-right:auto;
-         padding-bottom: 50%;
-	     background-color: #5A5A5A;
-         }
-         
-         .prob p {text-align: left;
-	   color: white;}
+.promptbox h3 {text-align: center;
+color: #FDD023;}
+.chooserbox {
+  max-width: 35%;
+  margin-left:auto;
+         margin-right:auto;}
+
 </style>
 </head>
 <body>
@@ -54,11 +52,58 @@ body {
 	<h3>Problem 1: Geologic Time</h3>
 	<h4>The purpose of this activity is to apply logic and the material discussed in lecture to a problem. 
 	In this case, you are trying to help someone with no background in geology or understanding 
-	of the Earth's age to understand how scientists arrived at an estimate of 4.5-4.7 billion years old.</h4>
-    </div>
-	<div class = "prob">
-	<p>Problem Start: Your goal is to explain to this person how scientists arrived at the current estimate for the age of the Earth. <br><br>Which of the following would best support your case?</p>
-    </div>
+	of the Earth's age to understand how scientists arrived at an estimate of 4.5-4.7 billion years old.</h4><br>
+	<p>Problem Start: Your goal is to explain to this person how scientists arrived at the current estimate for the age of the Earth.</p>
+    <div class = "promptbox">
+  <h3 class="prompt">
+    </h3>
+</div>
+<div class = "chooserbox">
+  <select class="chooser"></select>
+  <br>
+  <button class="act-btn">Select</button>
+</div>
+		const gameConfig = [
+  {
+    choice: "Start",
+    prompt: "Which of the following would best support your case?",
+    options: ["Evidence to support the claim", "A compelling story about your own opinions", "The history of how scientists calculated the age of the Earth"]
+  },
+  {
+    choice: "Evidence to support the claim",
+    prompt: "Good! What evidence works best?",
+    options: ["Fossils", "Radiometric Dating", "Both of these"]
+  },
+  {
+    choice: "A compelling story about your own opinions",
+    prompt: "The dragon breathes fire!",
+    options: ["Duck", "Jump"]
+  },
+  {
+    choice: "The history of how scientists calculated the age of the Earth",
+    prompt: "This might work. Where do you start?",
+    options: ["The ideas of different ancient civilizations", "Hutton and Lyell", "John Perry"]
+  }
+];
+
+const prompt = document.querySelector(".prompt");
+const chooser = document.querySelector(".chooser");
+const actBtn = document.querySelector(".act-btn");
+
+function act(choice) {
+  prompt.textContent = gameConfig.filter(
+    config => config.choice === choice
+  )[0].prompt;
+  chooser.innerHTML = gameConfig
+    .filter(config => config.choice === choice)[0]
+    .options.map(option => `<option value="${option}">${option}</option>`)
+    .join("");
+}
+
+actBtn.addEventListener("click", () => act(chooser.value));
+
+act("Start");
+
 
 </body>
 </html>
