@@ -1,0 +1,57 @@
+h1 {text-align: center;
+	    font-family: Oswald;
+    margin: 0.1em 0;
+    color: #66fcf1;}
+    h2 {text-align: center;
+	   color: #66fcf1;}
+     h3 {text-align: center;
+	   color: #66fcf1;}
+	h4 {text-align: left;
+	   color: white;}
+	p {text-align: center;
+	   color: white;}
+	  
+body {
+  background-image: url('HadeanEarth.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+	   
+  * {
+      font-family: Oswald;
+      color: black;
+      }
+.intro {
+   max-width: 85%;
+         height: 25%;
+	 margin-left:auto;
+         margin-right:auto;
+	background-color: transparent;
+	}
+.intro h3 {text-align: center;}
+.intro h4 {text-align: left;}
+.intro p {text-align: left;}
+.promptbox {
+         max-width: 65%;
+         height: 25%;
+	       margin-left:auto;
+         margin-right:auto;
+	       text-align: center;
+         font-family: Oswald;
+	background-color: transparent;
+	  }
+.promptbox h3 {text-align: center;
+color: #66fcf1;}
+.chooserbox {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: transparent;
+	 }
+.button
+{display: flex;
+  justify-content: center;
+  align-items: center;
+}
+	  .button p {color: "#192828";}
