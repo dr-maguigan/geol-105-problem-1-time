@@ -1,4 +1,5 @@
-const gameConfig = [
+const gameConfig = [ //start game configuration
+  //all options for prompt, choice, and options
   {
     choice: "Start",
     prompt: "Which of the following would best support your case?",
@@ -49,7 +50,7 @@ const gameConfig = [
     prompt: "Oh okay. So we can figure out how long it takes things to break down and some things break down really slowly, even millions or billions of years. Is that it?",
     options: ["Exactly!"]
   },
-  {
+  { //here is the final selection option
     choice: "Exactly!",
     prompt: "Congrats! You explained it so they understood! Now, go to Moodle and enter answer the secret word: 'Test of Time' into the Problem 1 Quiz. It might be best to copy and paste it so you don't have to worry about formatting.",
     options: ["Start"]
@@ -141,20 +142,20 @@ const gameConfig = [
   }  
 ];
 
-const prompt = document.querySelector(".prompt");
-const chooser = document.querySelector(".chooser");
-const actBtn = document.querySelector(".act-btn");
+const prompt = document.querySelector(".prompt"); //define prompt through querySelector
+const chooser = document.querySelector(".chooser"); //define choices through querySelector
+const actBtn = document.querySelector(".act-btn"); //define actions through querySelector
 
-function act(choice) {
-  prompt.textContent = gameConfig.filter(
+function act(choice) { //function for act
+  prompt.textContent = gameConfig.filter( //set up prompt based on choice
     config => config.choice === choice
   )[0].prompt;
-  chooser.innerHTML = gameConfig
+  chooser.innerHTML = gameConfig //set up innerHMTL to navigate around choices, which defines options
     .filter(config => config.choice === choice)[0]
     .options.map(option => `<option value="${option}">${option}</option>`)
-    .join("");
+    .join(""); //put it all together
 }
 
-actBtn.addEventListener("click", () => act(chooser.value));
+actBtn.addEventListener("click", () => act(chooser.value)); //add a listener
 
-act("Start");
+act("Start"); //defines starting point as first option, which contains "Start" as the choice
