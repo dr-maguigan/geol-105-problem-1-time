@@ -1,82 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>GEOL 105 - Introduction to Geology - Problem 1</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" rel="stylesheet" href="stylesheets/css/main.css" />
-<style>
-	h1 {text-align: center;
-		font-family: Oswald;
-		margin: 0.1em 0;
-		color: #66fcf1;}
-        h2 {text-align: center;
-		color: #66fcf1;}
-        h3 {text-align: center;
-		color: #66fcf1;}
-	h4 {text-align: left;
-		color: white;}
-	p {text-align: center;
-		color: white;}
-	body {
-  		background-image: url('HadeanEarth.png');
-  		background-repeat: no-repeat;
-  		background-attachment: fixed;  
- 		background-size: cover;}
-	* {
-		font-family: Oswald;
-		color: black;}
-	.intro {
-		max-width: 85%;
-		height: 25%;
-		margin-left:auto;
-		margin-right:auto;}
-	.intro h3 {text-align: center;}
-	.intro h4 {text-align: left;}
-	.intro p {text-align: left;}
-	.promptbox {
-		max-width: 65%;
-         	height: 25%;
-		margin-left:auto;
-         	margin-right:auto;
-		text-align: center;
-		font-family: Oswald;}
-	.promptbox h3 {text-align: center;
-		color: #66fcf1;}
-	.chooserbox {
-  		display: flex;
-		justify-content: center;
-		align-items: center;}
-	.button {
-		display: flex;
-  		justify-content: center;
-		align-items: center;}
-</style> 
+	<title>GEOL 105 - Introduction to Geology - Problem 1</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		h1 {text-align: center;
+			font-family: Oswald;
+			margin: 0.1em 0;
+			color: #66fcf1;}
+        	h2 {text-align: center;
+			color: #66fcf1;}
+        	h3 {text-align: center;
+			color: #66fcf1;}
+		h4 {text-align: left;
+			color: white;}
+		p {text-align: center;
+			color: white;}
+		body {
+  			background-image: url('HadeanEarth.png');
+  			background-repeat: no-repeat;
+  			background-attachment: fixed;  
+ 			background-size: cover;}
+		* {
+			font-family: Oswald;
+			color: black;}
+		.intro {
+			max-width: 85%;
+			height: 25%;
+			margin-left:auto;
+			margin-right:auto;}
+		.intro h3 {text-align: center;}
+		.intro h4 {text-align: left;}
+		.intro p {text-align: left;}
+		.promptbox {
+			max-width: 65%;
+         		height: 25%;
+			margin-left:auto;
+         		margin-right:auto;
+			text-align: center;
+			font-family: Oswald;}
+		.promptbox h3 {text-align: center;
+			color: #66fcf1;}
+		.chooserbox {
+  			display: flex;
+			justify-content: center;
+			align-items: center;}
+		.button {
+			display: flex;
+  			justify-content: center;
+			align-items: center;}
+	</style> 
 </head>
 <body>
-<h1>GEOL 105 - Introduction to Geology </h1>
-<div class = "intro"> \\add intro box with text
-	<h3>Problem 1: Geologic Time</h3>
-	<h4>The purpose of this activity is to apply logic and the material discussed in lecture to a problem. 
-	In this case, you are trying to help someone with no background in geology or understanding 
-	of the Earth's age to understand how scientists arrived at an estimate of 4.5-4.7 billion years old.</h4><br>
-	<p>Problem Start: Your goal is to explain to this person how scientists arrived at the current estimate for the age of the Earth.</p>
-</div>
-<br> \\add line breaks to space out divs
-<br>
-	
-<div class = "promptbox"> \\add prompt
-	<h3 class="prompt"></h3> \\pass in prompt query selector
-</div>
-<br> \\add line break to space out divs
-	<div class = "chooserbox"> \\add chooser
-		<br> \\add line break to space out button from div
- 		<select class="chooser"></select> \\pass in chooser query selector
-    			<div class = "button"> \\add button
-      				<button class="act-btn">Select</button> \\pass in button 
-    			</div>
+	<h1>GEOL 105 - Introduction to Geology </h1>
+	<div class = "intro"> \\add intro box with text
+		<h3>Problem 1: Geologic Time</h3>
+		<h4>The purpose of this activity is to apply logic and the material discussed in lecture to a problem. 
+		In this case, you are trying to help someone with no background in geology or understanding 
+		of the Earth's age to understand how scientists arrived at an estimate of 4.5-4.7 billion years old.</h4><br>
+		<p>Problem Start: Your goal is to explain to this person how scientists arrived at the current estimate for the age of the Earth.</p>
 	</div>
+	<br> \\add line breaks to space out divs
+	<br>	
+	<div class = "promptbox"> \\add prompt
+		<h3 class="prompt"></h3> \\pass in prompt query selector
+	</div>
+	<br> \\add line break to space out divs
+		<div class = "chooserbox"> \\add chooser
+			<br> \\add line break to space out button from div
+ 			<select class="chooser"></select> \\pass in chooser query selector
+    				<div class = "button"> \\add button
+      					<button class="act-btn">Select</button> \\pass in button 
+    				</div>
+		</div>
 
-	    <script src="js/chooser.js"></script> \\read in js file
+	<script src="js/chooser.js"></script> \\read in js file
 </body>
 </html>
