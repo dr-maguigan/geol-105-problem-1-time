@@ -1,5 +1,4 @@
-<script type="text/javascript">
-	const gameConfig = [
+const gameConfig = [
   {
     choice: "Start",
     prompt: "Which of the following would best support your case?",
@@ -159,4 +158,3 @@ function act(choice) {
 actBtn.addEventListener("click", () => act(chooser.value));
 
 act("Start");
-	</script>
